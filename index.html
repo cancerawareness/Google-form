@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Modernist Square Google Form with Sliding Questions</title>
+    <title>Modernist Custom Google Form</title>
     <style>
-        /* Your modernist CSS styles go here */
         body {
             font-family: "Helvetica", Arial, sans-serif;
             background: linear-gradient(90deg, #ff6600, #ffffff, #000000);
@@ -15,54 +14,33 @@
             min-height: 100vh;
         }
 
-        .square-container {
-            width: 600px; /* Adjust the width to make it a larger square */
-            height: 600px; /* Make it a square by setting the same height as width */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            overflow: hidden; /* Hide overflowing content */
-            position: relative; /* Position the iframe absolutely within the container */
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%; /* Make the iframe fill the square container */
-            border: none;
-            position: absolute; /* Position the iframe absolutely within the container */
-            top: 0;
-            left: 0;
-            transition: transform 0.3s ease; /* Add sliding animation */
+            text-align: center;
         }
 
         h1 {
             font-size: 24px;
             margin-bottom: 20px;
             color: #333;
-            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px; /* Adjust the height as needed */
+            border: none;
         }
     </style>
 </head>
 <body>
-    <div class="square-container">
+    <div class="container">
+        <h1>Contact Us</h1>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdj5f7TVVl7oDBG1dArSQlbZT5IYJ7Hease1_bhVphFgoKh4Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
-
-    <script>
-        const iframe = document.querySelector('iframe');
-        let currentSlide = 1;
-
-        function nextSlide() {
-            currentSlide++;
-            if (currentSlide > 3) { // Adjust the number of questions
-                currentSlide = 1; // Restart from the first question
-            }
-            const translateX = `translateX(-${(currentSlide - 1) * 100}%)`;
-            iframe.style.transform = translateX;
-        }
-
-        // Slide to the next question every 5 seconds (adjust the timing as needed)
-        setInterval(nextSlide, 5000);
-    </script>
 </body>
 </html>
