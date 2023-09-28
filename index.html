@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cancer Awareness Form</title> <!-- Updated title -->
+    <title>Cancer Awareness Form</title>
     <style>
         body {
             font-family: "Helvetica", Arial, sans-serif;
@@ -18,14 +18,14 @@
             width: 90%;
             max-width: 800px;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             text-align: center;
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 32px; /* Larger font size */
             margin-bottom: 20px;
             color: #333;
         }
@@ -35,12 +35,21 @@
             height: 500px; /* Adjust the height as needed */
             border: none;
         }
+
+        /* Add some colorful decoration */
+        .decoration {
+            background: linear-gradient(45deg, #ff6600, #ff3399);
+            height: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Questionnaire</h1> <!-- Updated heading -->
+        <h1>Questionnaire</h1>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdj5f7TVVl7oDBG1dArSQlbZT5IYJ7Hease1_bhVphFgoKh4Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div class="decoration"></div> <!-- Colorful decoration -->
     </div>
 </body>
 </html>
